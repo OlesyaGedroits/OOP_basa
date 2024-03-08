@@ -16,7 +16,7 @@ public class Program {
         BottleOfWater bottleOfWater1 = new BottleOfWater("Святой источник", "Вода без газов", 210, 0.5);
         System.out.println(bottleOfWater1.displayInfo());
 
-        Product bottleOfMilk1 = new BottleOfMilk("Минска марка", "Молоко", 310, 0.5, 2.5);
+        Product bottleOfMilk1 = new BottleOfMilk("Минская марка", "Молоко", 310, 0.5, 2.5);
         System.out.println(bottleOfMilk1.displayInfo());
 
         ArrayList<Product> list = new ArrayList<>();
