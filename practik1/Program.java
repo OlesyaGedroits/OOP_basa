@@ -7,41 +7,34 @@ public class Program {
 
     public static void main(String[] args) {
 
-        // Product  product1 = new Product("Brand #1", "Name #1", 350);
-        // System.out.println(product1.displayInfo());
-
-        Chokolate chokolate1 = new Chokolate("Комунарка", "Алёнка", 450, 250, "горький");
+        Chocolate chokolate1 = new Chocolate("Комунарка", "Алёнка", 450, 150, "горький");
         System.out.println(chokolate1.displayInfo());
 
+        Product chokolate2 = new Chocolate("Комунарка", "Алёнка", 650, 350, "молочный с орехами");
+        System.out.println(chokolate2.displayInfo());
 
-        // BottleOfWater bottleOfWater1 = new BottleOfWater("Brand #2", "Name #2", 210, 0.5);
-        // System.out.println(bottleOfWater1.displayInfo());
+        BottleOfWater bottleOfWater1 = new BottleOfWater("Святой источник", "Вода без газов", 210, 0.5);
+        System.out.println(bottleOfWater1.displayInfo());
 
-        // Product bottleOfWater2 = new BottleOfWater("Brand #2", "Name #2", 210, 0.5);
-        // System.out.println(bottleOfWater2.displayInfo());
+        Product bottleOfMilk1 = new BottleOfMilk("Минска марка", "Молоко", 310, 0.5, 2.5);
+        System.out.println(bottleOfMilk1.displayInfo());
 
-        // BottleOfMilk bottleOfMilk1 = new BottleOfMilk("Brand #3", "Name #3", 310, 0.5, 10);
-        // System.out.println(bottleOfMilk1.displayInfo());
+        ArrayList<Product> list = new ArrayList<>();
+        list.add(bottleOfMilk1);
+        list.add(bottleOfWater1);
+        list.add(chokolate1);
+        list.add(chokolate2);
+        list.add(new Chocolate("Спартак", "Алёшка", 410, 100, "молочный"));
 
-        // Product bottleOfMilk2 = new BottleOfMilk("Brand #3", "Name #3", 310, 0.5, 10);
-        // System.out.println(bottleOfMilk2.displayInfo());
-
-        // ArrayList<Product> list = new ArrayList<>();
-        // list.add(bottleOfMilk1);
-        // list.add(bottleOfWater1);
-        // list.add(bottleOfMilk2);
-        // list.add(bottleOfWater2);
-        // list.add(new BottleOfMilk("Brand #4", "Name #5", 310, 0.33, 1));
-
-        // VendingMachine vendingMachine = new VendingMachine(list);
-        // BottleOfWater bottleOfWaterRes =  vendingMachine.getBottleOfWater("Name #2", 1.5);
-        // if (bottleOfWaterRes != null){
-        //     System.out.println("Вы купили: ");
-        //     System.out.println(bottleOfWaterRes.displayInfo());
-        // }
-        // else {
-        //     System.out.println("Такой бутылки с водой нет в автомате.");
-        // }
+        VendingMachine vendingMachine = new VendingMachine(list);
+        Chocolate chocolateСhoice =  vendingMachine.getChokolate("горький", 250);
+        if (chocolateСhoice != null){
+            System.out.println("Вы выбрали: ");
+            System.out.println(chocolateСhoice.displayInfo());
+        }
+        else {
+            System.out.println("Такой шоколадки нет");
+        }
 
 
 
