@@ -27,6 +27,7 @@ public class Chocolate extends Product {
         this.typeOfChocolate = typeOfChocolate;
     }
 
+    @Override
     public String displayInfo(){
         return String.format("Шоколадка\n\tПроизводитель: %s\n\tНаименование: %s\n\tСтоимость: %.2f\n\tГрамм: %.2f\n\tТип шоколада: %s",
                 brand, name, price, gram, typeOfChocolate);
