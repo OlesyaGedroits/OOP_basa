@@ -6,9 +6,7 @@ package practik1;
 public class Product {
 
     protected String name;
-
     protected String brand;
-
     protected double price;
 
     public String getName() {
